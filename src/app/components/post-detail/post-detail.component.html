@@ -1,0 +1,20 @@
+<div class="col-md-12" *ngIf="!post">
+Cargando...
+
+</div>
+
+<div class="col-md-12 mt-3" *ngIf="post">
+
+<h1>{{post.title}}</h1>
+
+
+<h3 *ngIf="post['category']">{{post['category'].name}} -- <a [routerLink]="[ '/perfil', post.user_id]">{{post['user'].name}}</a> </h3>
+   <hr/> 
+   <p><span>{{post.content}}</span></p>
+   
+    <span *ngIf="identity && identity.sub == post.user_id"> 
+     <a [routerLink]="[ '/editar-entrada', post.id ]" class="btn btn-warning">Editar</a>
+    <a [routerLink]="[ '/inicio' ]" class="btn btn-danger mr-2">borrar</a> 
+ </span>
+
+</div>

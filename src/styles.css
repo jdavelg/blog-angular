@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+.avatar_edit{
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.card-header a{
+    text-decoration: none;
+    color: rgb(180, 2, 2);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+.post-image{
+
+height: 200px;
+width: 200px;
+overflow: hidden;
+
+}
+
+footer{
+    margin-top: 50px;
+    color: lightgray;
+}
