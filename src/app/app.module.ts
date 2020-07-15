@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { FroalaEditorModule, FroalaViewModule } from "angular-froala-wysiwyg";
+/* import { FroalaEditorModule, FroalaViewModule } from "angular-froala-wysiwyg"; */
 import { routing, appRoutingProviders } from "./app.routing";
 import { AngularFileUploaderModule } from "angular-file-uploader";
 
@@ -54,8 +54,8 @@ import { PostListComponent } from './components/post-list/post-list.component';
     routing,
     FormsModule,
     HttpClientModule,
-    FroalaEditorModule.forRoot(),
-     FroalaViewModule.forRoot(),
+/*     FroalaEditorModule.forRoot(),
+     FroalaViewModule.forRoot(), */
      AngularFileUploaderModule,
   ],
   providers: [
