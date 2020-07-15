@@ -24,6 +24,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 //definir las rutas
 const appRoutes:Routes =[
 { path: '', component: HomeComponent },
+{ path: '/', component: HomeComponent },
 { path: 'inicio', component: HomeComponent },
 { path: 'login', component: LoginComponent },
 { path: 'registro', component: RegisterComponent },
