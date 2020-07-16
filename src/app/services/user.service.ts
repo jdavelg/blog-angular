@@ -77,7 +77,7 @@ return this.token;
 
 }
 
-update( token, user):any{
+update( token, user, id):any{
 
 //limpiar campo content que viene desde el editor de texto froala
 user.description=global.htmlEntities(user.description);
@@ -89,7 +89,7 @@ user.description=global.htmlEntities(user.description);
 									   .set('Authorization', token);
 
 
-  return this._http.put(this.url+'user/update', params, {headers:headers} )
+  return this._http.put(this.url+'user/'+id, params, {headers:headers} )
 
 }
 
