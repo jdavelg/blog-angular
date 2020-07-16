@@ -2,9 +2,10 @@ const express = require('express')
 const app = express();
 const path = require('path');
 
-app.use(express.static(__dirname+'/dist/blog-angular'));
-app.get('/',function(req,res){
-    res.sendFile(path.join(__dirname+'/dist/blog-angular/index.html'));
+app.use(express.static('./dist/blog-angular'));
+app.get('/*',function(req,res){
+    res.sendFile('index.html', {root: 'dist/blog-angular/'}
+    );
 });
 
 app.listen(process.env.PORT || 8080);
