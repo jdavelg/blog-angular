@@ -89,7 +89,7 @@ user.description=global.htmlEntities(user.description);
 									   .set('Authorization', token);
 
 
-  return this._http.put(this.url+'user', params, {headers:headers} )
+  return this._http.put(this.url+'user/update', params, {headers:headers} )
 
 }
 
