@@ -1,5 +1,5 @@
 export var global={
-url: 'https://joli-madame-35697.herokuapp.com/',
+url: 'https://joli-madame-35697.herokuapp.com/api/',
 
  htmlEntities: function(str) {
     return String(str).replace('&ntilde;', 'ñ')
