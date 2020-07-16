@@ -77,7 +77,7 @@ return this.token;
 
 }
 
-update( token, user):Observable<any>{
+update( token, user):any{
 
 //limpiar campo content que viene desde el editor de texto froala
 user.description=global.htmlEntities(user.description);
@@ -85,10 +85,11 @@ user.description=global.htmlEntities(user.description);
   let json= JSON.stringify(user);
   let params= "json="+json;
 
-  let headers= new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded').set('Authorization', token);
+  let headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
+									   .set('Authorization', token);
 
 
-  return this._http.put(this.url+'user/', params, {headers:headers})
+  return this._http.put(this.url+'user', params, {headers:headers} )
 
 }
 
