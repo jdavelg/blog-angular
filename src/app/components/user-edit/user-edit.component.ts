@@ -78,7 +78,7 @@ this.user = new User(
 
   onSubmit(form){
     
-this._userService.update(this.token, this.user, this.identity.sub).subscribe(
+this._userService.update(this.token, this.user,).subscribe(
   response=>{
 
     if (response && response.status) {
