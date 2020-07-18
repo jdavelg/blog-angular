@@ -3,7 +3,7 @@ Cargando...
 
 </div>
 
-<div class="col-md-12 mt-3" *ngIf="post">
+<!-- <div class="col-md-12 mt-3" *ngIf="post">
 
 <h1>{{post.title}}</h1>
 
@@ -17,4 +17,50 @@ Cargando...
     <a [routerLink]="[ '/inicio' ]" class="btn btn-danger mr-2">borrar</a> 
  </span>
 
-</div>
+</div> -->
+
+
+<div class="col-lg-8" *ngIf="post">
+
+   <!-- Title -->
+   <h1 class="mt-4">{{post.title}}</h1>
+
+   <!-- Author -->
+   <p class="lead">
+     autor
+     <a [routerLink]="[ '/perfil', post.user_id]">{{post['user'].name}}</a>
+   </p>
+
+   <hr>
+
+   <!-- Category -->
+   <p *ngIf="post['category']">{{post['category'].name}}</p>
+
+   <hr>
+
+   <!-- Preview Image -->
+   <img class="img-fluid rounded" src="{{url+'post/image/' + post.image}}" alt="" *ngIf="post.image">
+   <img src="https://increasify.com.au/wp-content/uploads/2016/08/default-image.png" class="img-fluid rounded" *ngIf="!post.image">
+   <hr>
+
+   <!-- Post Content -->
+   <p class="lead">{{post.title}}</p>
+
+   <p>{{post.content}}</p>
+
+ 
+
+   
+
+   
+
+   <hr>
+
+   <div *ngIf="identity && identity.sub == post.user_id"> 
+      <a [routerLink]="[ '/editar-entrada', post.id ]" class="btn btn-warning">Editar</a>
+     <a [routerLink]="[ '/inicio' ]" class="btn btn-danger mr-2">borrar</a> 
+   </div>
+  
+  
+
+ </div>

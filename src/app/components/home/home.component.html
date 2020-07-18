@@ -6,45 +6,30 @@ Cargando...
 <div class="container-fluid mt-3" *ngIf="posts">
 <h1>{{page_title}}</h1>
 
-<div class="card-colums">
 
-
-
-
-    <div class="card" *ngFor="let post of posts">
-        <img src="{{url+'post/image/' + post.image}}" class="card-img-top" *ngIf="post.image">
-        <img src="https://via.placeholder.com/500x300" class="card-img-top" *ngIf="!post.image">
-        <div class="card-body">
-          <h3 class="card-title"><a [routerLink]="[ '/entrada', post.id]">{{post.title}}</a></h3>
-          <p class="card-text"><a [routerLink]="[ '/entrada', post.id]">Puedes ver el post dando click aqui</a></p>
-        </div>
-
-
-
-
-
-    <!-- <div class="card row-cols-1 row-cols-md-3" *ngFor="let post of posts">
-<div class="card-header">
-        <h3><a [routerLink]="[ '/entrada', post.id]">{{post.title}}</a></h3>
-</div>
-
-<div class="card-body">
-
-<div class="post-image " *ngIf="post.image" class="h-100">
-<img src="{{url+'post/image/' + post.image}}" class="w-100">
-</div>
-<div class="post-image w-100 h-100" *ngIf="!post.image">
-    <img src="https://via.placeholder.com/500x300" class="w-100">
+<div class="card mb-4" *ngFor="let post of posts">
+    <img class="card-img-top" src="{{url+'post/image/' + post.image}}" alt="Card image cap" *ngIf="post.image">
+    <img class="card-img-top" src="https://increasify.com.au/wp-content/uploads/2016/08/default-image.png" alt="Card image cap" *ngIf="!post.image">
+    <div class="card-body">
+      <h2 class="card-title"><a [routerLink]="[ '/entrada', post.id]">{{post.title}}</a></h2>
+      <p class="card-text">Este es un articulo del blog</p>
+      <a [routerLink]="[ '/entrada', post.id]" class="btn btn-primary">Leer articulo &rarr;</a>
     </div>
+    <div class="card-footer text-muted">
+      Publicado hace mas de una semana
+      
+    </div>
+  </div>
 
-<div class="post-buttons mt-5">
-
-    <a [routerLink]="[ '/entrada', post.id ]" class="btn btn-info mr-2">Leer</a>
-
-</div>
-
-</div>
-</div> -->
-</div>
+<!-- <div class="card mb-3 mt-2" *ngFor="let post of posts">
+    <img class="card-img-top" src="{{url+'post/image/' + post.image}}" alt="Card image cap" *ngIf="post.image">
+    <img class="card-img-top" src="https://increasify.com.au/wp-content/uploads/2016/08/default-image.png" alt="Card image cap" *ngIf="!post.image">
+    
+    <div class="card-body">
+      <h5 class="card-title"><a [routerLink]="[ '/entrada', post.id]">{{post.title}}</a></h5>
+      <p class="card-text"><a [routerLink]="[ '/entrada', post.id]" style="text-decoration: none; ">Click aqui para Leer</a></p>
+      <p class="card-text"><small class="text-muted">Hace mas de una semana</small></p>
+    </div>
+  </div> -->
 
 </div>

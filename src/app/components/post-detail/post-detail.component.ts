@@ -3,6 +3,7 @@ import { Post } from 'src/app/models/post';
 import { PostService } from 'src/app/services/post.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
+import { global } from 'src/app/services/global';
 
 
 
@@ -17,7 +18,7 @@ import { UserService } from 'src/app/services/user.service';
   ]
 })
 export class PostDetailComponent implements OnInit {
-
+public url:string
   public post:Post;
   public status:string;
   public identity;
@@ -29,7 +30,7 @@ export class PostDetailComponent implements OnInit {
     private _userService:UserService
 
   ) {
-
+this.url=global.url
     this.identity=this._userService.getIdentity();
    }
 

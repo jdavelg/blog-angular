@@ -19,11 +19,12 @@ import { PostEditComponent } from './components/post-edit/post-edit.component';
 import { CategoryDetailComponent } from './components/category-detail/category-detail.component';
 import { IdentityGuard } from './services/identity.guard';
 import { ProfileComponent } from './components/profile/profile.component';
+import { InicioComponentComponent } from './inicio-component/inicio-component.component';
 
 
 //definir las rutas
 const appRoutes:Routes =[
-{ path: '', component: HomeComponent },
+{ path: '', component: InicioComponentComponent },
 
 { path: 'inicio', component: HomeComponent },
 { path: 'login', component: LoginComponent },

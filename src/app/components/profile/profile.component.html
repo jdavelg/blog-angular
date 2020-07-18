@@ -4,9 +4,9 @@
     </div>
     
     <div class="container-fluid mt-3" *ngIf="posts">
-    <h1>{{page_title}}</h1>
+    <h2 style="color:#ccc">Perfil de {{user.name + ' '+user.surname}}</h2>
 <div class="user-card float-left">
-    <h2>Perfil de {{user.name + ' '+user.surname}} </h2>
+    <!-- <h5 style="color: #ccc">Perfil de {{user.name + ' '+user.surname}} </h5> -->
     <div *ngIf="identity && identity.image" class="ml-3 mr-3">
         <img src="{{url+ 'user/avatar/'+user.image}}" style=" vertical-align: middle;
         width: 90px;
@@ -17,30 +17,18 @@
 </div>
 
 <div class="clearfix"></div>
-    <div class="card-colums">
-    
-        <article class="card w-100" *ngFor="let post of posts">
-    <div class="card-header">
-            <h3><a [routerLink]="[ '/entrada', post.id]">{{post.title}}</a></h3>
-    </div>
-    
+<div class="card mb-4" *ngFor="let post of posts">
+    <img class="card-img-top" src="{{url+'post/image/' + post.image}}" alt="Card image cap" *ngIf="post.image">
+    <img class="card-img-top" src="https://increasify.com.au/wp-content/uploads/2016/08/default-image.png" alt="Card image cap" *ngIf="!post.image">
     <div class="card-body">
-    <!-- imagen -->
-    <div class="post-image w-100" *ngIf="post.image">
-    <img src="{{url+'post/image/' + post.image}}" class="w-100">
+      <h2 class="card-title"><a [routerLink]="[ '/entrada', post.id]">{{post.title}}</a></h2>
+      <p class="card-text">Este es un articulo del blog</p>
+      <a [routerLink]="[ '/entrada', post.id]" class="btn btn-primary">Leer articulo &rarr;</a>
     </div>
-    <div class="post-image w-100" *ngIf="!post.image">
-        <img src="https://via.placeholder.com/500x300" class="w-100">
-        </div>
-    <!-- Botones de Accion -->
-    <div class="post-buttons mt-5">
-    
-        <a [routerLink]="[ '/entrada', post.id ]" class="btn btn-info mr-2">Leer</a>
-    
+    <div class="card-footer text-muted">
+      Publicado hace mas de una semana
+      
     </div>
-    
-    </div>
-        </article>
-    </div>
+  </div>
     
     </div>

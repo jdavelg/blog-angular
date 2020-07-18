@@ -23,6 +23,7 @@ import { IdentityGuard } from './services/identity.guard';
 import { UserService } from './services/user.service';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PostListComponent } from './components/post-list/post-list.component';
+import { InicioComponentComponent } from './inicio-component/inicio-component.component';
 
 
 
@@ -47,7 +48,9 @@ import { PostListComponent } from './components/post-list/post-list.component';
  
     ProfileComponent,
  
-    PostListComponent
+    PostListComponent,
+ 
+    InicioComponentComponent
   ],
   imports: [
     BrowserModule,
